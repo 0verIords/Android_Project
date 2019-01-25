@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         Button del = (Button) findViewById ( R.id.button6 );
         Button ymn = (Button) findViewById ( R.id.button7 );
 
+        Button point = (Button) findViewById ( R.id.button22 );
+
         Button reselt = (Button) findViewById ( R.id.button );
         Button delete = (Button) findViewById ( R.id.button14 );
 
@@ -49,8 +51,13 @@ public class MainActivity extends AppCompatActivity {
         but0.setOnClickListener ( new View.OnClickListener () {
             @Override
             public void onClick(View v) {
-                textView2.setText ( textView2.getText ().toString () + "0" );
-                textView1.setText ( textView1.getText ().toString () + "0" );
+
+                if (isNamberFol (textView2.getText ().toString ())) {
+                    textView2.setText ( textView2.getText ().toString () + "0" );
+                    textView1.setText ( textView1.getText ().toString () + "0" );
+                } else {
+                    Toast.makeText( MainActivity.this, "numbers can not be more than six (6)", Toast.LENGTH_LONG ).show ();
+                }
 
                 if (res1 == 0) {
                     res1 = Double.parseDouble ( textView2.getText ().toString () );
@@ -64,8 +71,13 @@ public class MainActivity extends AppCompatActivity {
         but1.setOnClickListener ( new View.OnClickListener () {
             @Override
             public void onClick(View v) {
-                textView2.setText ( textView2.getText ().toString () + "1" );
-                textView1.setText ( textView1.getText ().toString () + "1" );
+
+                if (isNamberFol (textView2.getText ().toString ())) {
+                    textView2.setText ( textView2.getText ().toString () + "1" );
+                    textView1.setText ( textView1.getText ().toString () + "1" );
+                } else {
+                    Toast.makeText( MainActivity.this, "numbers can not be more than six (6)", Toast.LENGTH_LONG ).show ();
+                }
 
                 if (res1 == 0) {
                     res1 = Double.parseDouble ( textView2.getText ().toString () );
@@ -78,9 +90,13 @@ public class MainActivity extends AppCompatActivity {
         but2.setOnClickListener ( new View.OnClickListener () {
             @Override
             public void onClick(View v) {
-                textView2.setText ( textView2.getText ().toString () + "2" );
-                textView1.setText ( textView1.getText ().toString () + "2" );
 
+                if (isNamberFol (textView2.getText ().toString ())) {
+                    textView2.setText ( textView2.getText ().toString () + "2" );
+                    textView1.setText ( textView1.getText ().toString () + "2" );
+                } else {
+                    Toast.makeText( MainActivity.this, "numbers can not be more than six (6)", Toast.LENGTH_LONG ).show ();
+                }
                 if (res1 == 0) {
                     res1 = Double.parseDouble ( textView2.getText ().toString () );
                 } else {
@@ -92,8 +108,13 @@ public class MainActivity extends AppCompatActivity {
         but3.setOnClickListener ( new View.OnClickListener () {
             @Override
             public void onClick(View v) {
-                textView2.setText ( textView2.getText ().toString () + "3" );
-                textView1.setText ( textView1.getText ().toString () + "3" );
+
+                if (isNamberFol (textView2.getText ().toString ())) {
+                    textView2.setText ( textView2.getText ().toString () + "3" );
+                    textView1.setText ( textView1.getText ().toString () + "3" );
+                } else {
+                    Toast.makeText( MainActivity.this, "numbers can not be more than six (6)", Toast.LENGTH_LONG ).show ();
+                }
 
                 if (res1 == 0) {
                     res1 = Double.parseDouble ( textView2.getText ().toString () );
@@ -106,8 +127,13 @@ public class MainActivity extends AppCompatActivity {
         but4.setOnClickListener ( new View.OnClickListener () {
             @Override
             public void onClick(View v) {
-                textView2.setText ( textView2.getText ().toString () + "4" );
-                textView1.setText ( textView1.getText ().toString () + "4" );
+
+                if (isNamberFol (textView2.getText ().toString ())) {
+                    textView2.setText ( textView2.getText ().toString () + "4" );
+                    textView1.setText ( textView1.getText ().toString () + "4" );
+                } else {
+                    Toast.makeText( MainActivity.this, "numbers can not be more than six (6)", Toast.LENGTH_LONG ).show ();
+                }
 
                 if (res1 == 0) {
                     res1 = Double.parseDouble ( textView2.getText ().toString () );
@@ -120,8 +146,13 @@ public class MainActivity extends AppCompatActivity {
         but5.setOnClickListener ( new View.OnClickListener () {
             @Override
             public void onClick(View v) {
-                textView2.setText ( textView2.getText ().toString () + "5" );
-                textView1.setText ( textView1.getText ().toString () + "5" );
+
+                if (isNamberFol (textView2.getText ().toString ())) {
+                    textView2.setText ( textView2.getText ().toString () + "5" );
+                    textView1.setText ( textView1.getText ().toString () + "5" );
+                } else {
+                    Toast.makeText( MainActivity.this, "numbers can not be more than six (6)", Toast.LENGTH_LONG ).show ();
+                }
 
                 if (res1 == 0) {
                     res1 = Double.parseDouble ( textView2.getText ().toString () );
@@ -134,8 +165,13 @@ public class MainActivity extends AppCompatActivity {
         but6.setOnClickListener ( new View.OnClickListener () {
             @Override
             public void onClick(View v) {
-                textView2.setText ( textView2.getText ().toString () + "6" );
-                textView1.setText ( textView1.getText ().toString () + "6" );
+
+                if (isNamberFol (textView2.getText ().toString ())) {
+                    textView2.setText ( textView2.getText ().toString () + "6" );
+                    textView1.setText ( textView1.getText ().toString () + "6" );
+                } else {
+                    Toast.makeText( MainActivity.this, "numbers can not be more than six (6)", Toast.LENGTH_LONG ).show ();
+                }
 
                 if (res1 == 0) {
                     res1 = Double.parseDouble ( textView2.getText ().toString () );
@@ -148,8 +184,13 @@ public class MainActivity extends AppCompatActivity {
         but7.setOnClickListener ( new View.OnClickListener () {
             @Override
             public void onClick(View v) {
-                textView2.setText ( textView2.getText ().toString () + "7" );
-                textView1.setText ( textView1.getText ().toString () + "7" );
+
+                if (isNamberFol (textView2.getText ().toString ())) {
+                    textView2.setText ( textView2.getText ().toString () + "7" );
+                    textView1.setText ( textView1.getText ().toString () + "7" );
+                } else {
+                    Toast.makeText( MainActivity.this, "numbers can not be more than six (6)", Toast.LENGTH_LONG ).show ();
+                }
 
                 if (res1 == 0) {
                     res1 = Double.parseDouble ( textView2.getText ().toString () );
@@ -162,8 +203,13 @@ public class MainActivity extends AppCompatActivity {
         but8.setOnClickListener ( new View.OnClickListener () {
             @Override
             public void onClick(View v) {
-                textView2.setText ( textView2.getText ().toString () + "8" );
-                textView1.setText ( textView1.getText ().toString () + "8" );
+
+                if (isNamberFol (textView2.getText ().toString ())) {
+                    textView2.setText ( textView2.getText ().toString () + "8" );
+                    textView1.setText ( textView1.getText ().toString () + "8" );
+                } else {
+                    Toast.makeText( MainActivity.this, "numbers can not be more than six (6)", Toast.LENGTH_LONG ).show ();
+                }
 
                 if (res1 == 0) {
                     res1 = Double.parseDouble ( textView2.getText ().toString () );
@@ -177,13 +223,30 @@ public class MainActivity extends AppCompatActivity {
         but9.setOnClickListener ( new View.OnClickListener () {
             @Override
             public void onClick(View v) {
-                textView2.setText ( textView2.getText ().toString () + "9" );
-                textView1.setText ( textView1.getText ().toString () + "9" );
+
+                if (isNamberFol (textView2.getText ().toString ())) {
+                    textView2.setText ( textView2.getText ().toString () + "9" );
+                    textView1.setText ( textView1.getText ().toString () + "9" );
+                } else {
+                    Toast.makeText( MainActivity.this, "numbers can not be more than six (6)", Toast.LENGTH_LONG ).show ();
+                }
 
                 if (res1 == 0) {
                     res1 = Double.parseDouble ( textView2.getText ().toString () );
                 } else {
                     res2 = Double.parseDouble ( textView2.getText ().toString () );
+                }
+            }
+        } );
+
+        point.setOnClickListener ( new View.OnClickListener () {
+            @Override
+            public void onClick(View v) {
+                if (isPoint ( textView2.getText ().toString () )) {
+                    textView2.setText ( textView2.getText ().toString () + "." );
+                    textView1.setText ( textView1.getText ().toString () + "." );
+                } else if (!isPoint ( textView2.getText ().toString () )) {
+                    Toast.makeText( MainActivity.this, "the point is already there", Toast.LENGTH_LONG ).show ();
                 }
             }
         } );
@@ -278,12 +341,23 @@ public class MainActivity extends AppCompatActivity {
         reselt.setOnClickListener ( new View.OnClickListener () {
             @Override
             public void onClick(View v) {
-                if (res2 != 0) {
-                    textView1.setText ( textView1.getText ().toString () + " = " );
-                    aDouble = reseltDouble ( oper, res1, res2 );
-                    textView2.setText ( "" + reseltDouble ( oper, res1, res2 ) );
-                } else {
-                    Toast.makeText( MainActivity.this, "it is impossible to divide by ZERO", Toast.LENGTH_LONG ).show ();
+
+                try {
+                    if (res2 != 0) {
+                        if (isEqually ( textView1.getText ().toString () )) {
+                            textView1.setText ( textView1.getText ().toString () + " = " );
+                        }
+                        aDouble = reseltDouble ( oper, res1, res2 );
+                        textView2.setText ( "" + reseltDouble ( oper, res1, res2 ) );
+                    } else {
+                        Toast.makeText ( MainActivity.this, "it is impossible to divide by ZERO", Toast.LENGTH_LONG ).show ();
+                        textView2.setText ( "" );
+                        textView1.setText ( "" );
+                        res2 = 0;
+                        res1 = 0;
+                    }
+                } catch (Exception e) {
+                    Toast.makeText ( MainActivity.this, "Unknown error", Toast.LENGTH_LONG ).show ();
                     textView2.setText ( "" );
                     textView1.setText ( "" );
                     res2 = 0;
@@ -323,6 +397,43 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return reselt;
+    }
+
+    public static boolean isNamberFol (String str) {
+        boolean booleanFinal = false;
+
+        if (str.length () < 6) {
+            booleanFinal = true;
+        }
+
+        return booleanFinal;
+    }
+
+    public static boolean isPoint (String str) {
+        boolean booleanFinal = true;
+        char[] chars = str.toCharArray ();
+
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] == '.') {
+                booleanFinal = false;
+            }
+        }
+
+        return booleanFinal;
+    }
+
+    public static boolean isEqually (String str) {
+        boolean booleanFinal = true;
+
+        char[] chars = str.toCharArray ();
+
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] == '=') {
+                booleanFinal = false;
+            }
+        }
+
+        return booleanFinal;
     }
 
     @Override
