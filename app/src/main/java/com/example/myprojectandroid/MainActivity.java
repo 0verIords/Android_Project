@@ -1,5 +1,6 @@
 package com.example.myprojectandroid;
 
+import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,7 +11,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    public double res1, res2;
+    public double res1 = 0, res2 = 0, aDouble = 0;
     public String oper;
 
     @Override
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_main );
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         final TextView textView1 = (TextView) findViewById ( R.id.textView1 );
         final TextView textView2 = (TextView) findViewById ( R.id.textView2 );
@@ -48,12 +50,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 textView2.setText ( textView2.getText ().toString () + "0" );
+                textView1.setText ( textView1.getText ().toString () + "0" );
 
                 if (res1 == 0) {
                     res1 = Double.parseDouble ( textView2.getText ().toString () );
                 } else {
                     res2 = Double.parseDouble ( textView2.getText ().toString () );
                 }
+
             }
         } );
 
@@ -61,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 textView2.setText ( textView2.getText ().toString () + "1" );
+                textView1.setText ( textView1.getText ().toString () + "1" );
 
                 if (res1 == 0) {
                     res1 = Double.parseDouble ( textView2.getText ().toString () );
@@ -74,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 textView2.setText ( textView2.getText ().toString () + "2" );
+                textView1.setText ( textView1.getText ().toString () + "2" );
 
                 if (res1 == 0) {
                     res1 = Double.parseDouble ( textView2.getText ().toString () );
@@ -87,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 textView2.setText ( textView2.getText ().toString () + "3" );
+                textView1.setText ( textView1.getText ().toString () + "3" );
 
                 if (res1 == 0) {
                     res1 = Double.parseDouble ( textView2.getText ().toString () );
@@ -100,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 textView2.setText ( textView2.getText ().toString () + "4" );
+                textView1.setText ( textView1.getText ().toString () + "4" );
 
                 if (res1 == 0) {
                     res1 = Double.parseDouble ( textView2.getText ().toString () );
@@ -113,6 +121,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 textView2.setText ( textView2.getText ().toString () + "5" );
+                textView1.setText ( textView1.getText ().toString () + "5" );
 
                 if (res1 == 0) {
                     res1 = Double.parseDouble ( textView2.getText ().toString () );
@@ -126,6 +135,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 textView2.setText ( textView2.getText ().toString () + "6" );
+                textView1.setText ( textView1.getText ().toString () + "6" );
 
                 if (res1 == 0) {
                     res1 = Double.parseDouble ( textView2.getText ().toString () );
@@ -139,6 +149,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 textView2.setText ( textView2.getText ().toString () + "7" );
+                textView1.setText ( textView1.getText ().toString () + "7" );
 
                 if (res1 == 0) {
                     res1 = Double.parseDouble ( textView2.getText ().toString () );
@@ -152,6 +163,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 textView2.setText ( textView2.getText ().toString () + "8" );
+                textView1.setText ( textView1.getText ().toString () + "8" );
 
                 if (res1 == 0) {
                     res1 = Double.parseDouble ( textView2.getText ().toString () );
@@ -161,23 +173,12 @@ public class MainActivity extends AppCompatActivity {
             }
         } );
 
-        but0.setOnClickListener ( new View.OnClickListener () {
-            @Override
-            public void onClick(View v) {
-                textView2.setText ( textView2.getText ().toString () + "0" );
-
-                if (res1 == 0) {
-                    res1 = Double.parseDouble ( textView2.getText ().toString () );
-                } else {
-                    res2 = Double.parseDouble ( textView2.getText ().toString () );
-                }
-            }
-        } );
 
         but9.setOnClickListener ( new View.OnClickListener () {
             @Override
             public void onClick(View v) {
                 textView2.setText ( textView2.getText ().toString () + "9" );
+                textView1.setText ( textView1.getText ().toString () + "9" );
 
                 if (res1 == 0) {
                     res1 = Double.parseDouble ( textView2.getText ().toString () );
@@ -192,6 +193,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 oper = "-";
                 res1 = Double.parseDouble ( textView2.getText ().toString () );
+
+                if (aDouble != 0) {
+                    textView1.setText ( "" + aDouble );
+                    aDouble = 0;
+                }
+
+                textView1.setText ( textView1.getText ().toString () + " - " );
+
                 textView2.setText ( "" );
             }
         } );
@@ -201,6 +210,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 oper = "+";
                 res1 = Double.parseDouble ( textView2.getText ().toString () );
+
+                if (aDouble != 0) {
+                    textView1.setText ( "" + aDouble );
+                    aDouble = 0;
+                }
+
+                textView1.setText ( textView1.getText ().toString () + " + " );
+
+
                 textView2.setText ( "" );
             }
         } );
@@ -210,6 +228,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 oper = "/";
                 res1 = Double.parseDouble ( textView2.getText ().toString () );
+
+                if (aDouble != 0) {
+                    textView1.setText ( "" + aDouble );
+                    aDouble = 0;
+                }
+
+                textView1.setText ( textView1.getText ().toString () + " ÷ " );
+
                 textView2.setText ( "" );
             }
         } );
@@ -219,6 +245,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 oper = "*";
                 res1 = Double.parseDouble ( textView2.getText ().toString () );
+                if (aDouble != 0) {
+                    textView1.setText ( "" + aDouble );
+                    aDouble = 0;
+                }
+
+                textView1.setText ( textView1.getText ().toString () + " * " );
+
                 textView2.setText ( "" );
             }
         } );
@@ -227,6 +260,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 textView2.setText (charDeleteMetod ( textView2.getText ().toString () ));
+                textView1.setText (charDeleteMetod ( textView1.getText ().toString () ));
             }
         } );
 
@@ -245,10 +279,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (res2 != 0) {
+                    textView1.setText ( textView1.getText ().toString () + " = " );
+                    aDouble = reseltDouble ( oper, res1, res2 );
                     textView2.setText ( "" + reseltDouble ( oper, res1, res2 ) );
                 } else {
-                    Toast.makeText( MainActivity.this, "it is impossible to divide by zero", Toast.LENGTH_LONG ).show ();
+                    Toast.makeText( MainActivity.this, "it is impossible to divide by ZERO", Toast.LENGTH_LONG ).show ();
                     textView2.setText ( "" );
+                    textView1.setText ( "" );
                     res2 = 0;
                     res1 = 0;
                 }
