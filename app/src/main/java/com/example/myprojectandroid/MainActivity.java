@@ -9,7 +9,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import static com.example.myprojectandroid.Methot.*;
+
+public class MainActivity extends AppCompatActivity{
 
     public double res1 = 0, res2 = 0, aDouble = 0;
     public String oper;
@@ -264,6 +266,10 @@ public class MainActivity extends AppCompatActivity {
 
                 textView1.setText ( textView1.getText ().toString () + " - " );
 
+                if (isPoop( textView1.getText().toString())) {
+                    textView1.setText ( isMyMetod ( textView1.getText ().toString ()));
+                }
+
                 textView2.setText ( "" );
             }
         } );
@@ -281,6 +287,9 @@ public class MainActivity extends AppCompatActivity {
 
                 textView1.setText ( textView1.getText ().toString () + " + " );
 
+                if (isPoop( textView1.getText().toString())) {
+                    textView1.setText ( isMyMetod ( textView1.getText ().toString ()));
+                }
 
                 textView2.setText ( "" );
             }
@@ -299,6 +308,10 @@ public class MainActivity extends AppCompatActivity {
 
                 textView1.setText ( textView1.getText ().toString () + " ÷ " );
 
+                if (isPoop( textView1.getText().toString())) {
+                    textView1.setText ( isMyMetod ( textView1.getText ().toString ()));
+                }
+
                 textView2.setText ( "" );
             }
         } );
@@ -313,7 +326,11 @@ public class MainActivity extends AppCompatActivity {
                     aDouble = 0;
                 }
 
-                textView1.setText ( textView1.getText ().toString () + " * " );
+                textView1.setText ( textView1.getText ().toString () + " × " );
+
+                if (isPoop( textView1.getText().toString())) {
+                    textView1.setText ( isMyMetod ( textView1.getText ().toString ()));
+                }
 
                 textView2.setText ( "" );
             }
@@ -366,74 +383,6 @@ public class MainActivity extends AppCompatActivity {
             }
         } );
 
-    }
-
-    public static String charDeleteMetod (String str) {
-        char[] chars = str.toCharArray ();
-        String strFinal = "";
-
-        for (int i = 0; i < chars.length - 1; i++) {
-            strFinal += chars[i];
-        }
-        return strFinal;
-    }
-
-    public static double reseltDouble (String str, double a, double b) {
-        double reselt = 0;
-
-        switch (str) {
-            case "/" :
-                reselt = a / b;
-                break;
-            case "*" :
-                reselt = a * b;
-                break;
-            case "-" :
-                reselt = a - b;
-                break;
-            case "+" :
-                reselt = a + b;
-                break;
-        }
-
-        return reselt;
-    }
-
-    public static boolean isNamberFol (String str) {
-        boolean booleanFinal = false;
-
-        if (str.length () < 6) {
-            booleanFinal = true;
-        }
-
-        return booleanFinal;
-    }
-
-    public static boolean isPoint (String str) {
-        boolean booleanFinal = true;
-        char[] chars = str.toCharArray ();
-
-        for (int i = 0; i < chars.length; i++) {
-            if (chars[i] == '.') {
-                booleanFinal = false;
-            }
-        }
-
-        return booleanFinal;
-    }
-
-    public static boolean isEqually (String str) {
-        boolean booleanFinal = true;
-
-        char[] chars = str.toCharArray ();
-
-        for (int i = 0; i < chars.length; i++) {
-            if (chars[i] == '=') {
-                booleanFinal = false;
-            }
-        }
-
-        return booleanFinal;
     }
 
     @Override
