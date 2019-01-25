@@ -256,83 +256,118 @@ public class MainActivity extends AppCompatActivity{
         min.setOnClickListener ( new View.OnClickListener () {
             @Override
             public void onClick(View v) {
-                oper = "-";
-                res1 = Double.parseDouble ( textView2.getText ().toString () );
+                try {
+                    oper = "-";
+                    res1 = Double.parseDouble ( textView2.getText ().toString () );
 
-                if (aDouble != 0) {
-                    textView1.setText ( "" + aDouble );
-                    aDouble = 0;
+                    if (aDouble != 0) {
+                        textView1.setText ( "" + aDouble );
+                        aDouble = 0;
+                    }
+
+                    textView1.setText ( textView1.getText ().toString () + " - " );
+
+                    if (isPoop ( textView1.getText ().toString () )) {
+                        textView1.setText ( isMyMetod ( textView1.getText ().toString () ) );
+                    }
+
+                    textView2.setText ( "" );
+                } catch (Exception e) {
+                    Toast.makeText ( MainActivity.this, "Unknown error", Toast.LENGTH_LONG ).show ();
+                    textView2.setText ( "" );
+                    textView1.setText ( "" );
+                    res2 = 0;
+                    res1 = 0;
                 }
-
-                textView1.setText ( textView1.getText ().toString () + " - " );
-
-                if (isPoop( textView1.getText().toString())) {
-                    textView1.setText ( isMyMetod ( textView1.getText ().toString ()));
-                }
-
-                textView2.setText ( "" );
             }
         } );
 
         pul.setOnClickListener ( new View.OnClickListener () {
             @Override
             public void onClick(View v) {
-                oper = "+";
-                res1 = Double.parseDouble ( textView2.getText ().toString () );
+                try {
+                    oper = "+";
+                    res1 = Double.parseDouble ( textView2.getText ().toString () );
 
-                if (aDouble != 0) {
-                    textView1.setText ( "" + aDouble );
-                    aDouble = 0;
+                    if (aDouble != 0) {
+                        textView1.setText ( "" + aDouble );
+                        aDouble = 0;
+                    }
+
+                    textView1.setText ( textView1.getText ().toString () + " + " );
+
+                    if (isPoop ( textView1.getText ().toString () )) {
+                        textView1.setText ( isMyMetod ( textView1.getText ().toString () ) );
+                    }
+
+                    textView2.setText ( "" );
+                } catch (Exception e) {
+                    Toast.makeText ( MainActivity.this, "Unknown error", Toast.LENGTH_LONG ).show ();
+                    textView2.setText ( "" );
+                    textView1.setText ( "" );
+                    res2 = 0;
+                    res1 = 0;
+                    oper = "";
                 }
-
-                textView1.setText ( textView1.getText ().toString () + " + " );
-
-                if (isPoop( textView1.getText().toString())) {
-                    textView1.setText ( isMyMetod ( textView1.getText ().toString ()));
-                }
-
-                textView2.setText ( "" );
             }
         } );
 
         del.setOnClickListener ( new View.OnClickListener () {
             @Override
             public void onClick(View v) {
-                oper = "/";
-                res1 = Double.parseDouble ( textView2.getText ().toString () );
+                try {
+                    oper = "/";
+                    res1 = Double.parseDouble ( textView2.getText ().toString () );
 
-                if (aDouble != 0) {
-                    textView1.setText ( "" + aDouble );
-                    aDouble = 0;
+                    if (aDouble != 0) {
+                        textView1.setText ( "" + aDouble );
+                        aDouble = 0;
+                    }
+
+                    textView1.setText ( textView1.getText ().toString () + " ÷ " );
+
+                    if (isPoop ( textView1.getText ().toString () )) {
+                        textView1.setText ( isMyMetod ( textView1.getText ().toString () ) );
+                    }
+
+                    textView2.setText ( "" );
+                } catch (Exception e) {
+                    Toast.makeText ( MainActivity.this, "Unknown error", Toast.LENGTH_LONG ).show ();
+                    textView2.setText ( "" );
+                    textView1.setText ( "" );
+                    res2 = 0;
+                    res1 = 0;
+                    oper = "";
                 }
-
-                textView1.setText ( textView1.getText ().toString () + " ÷ " );
-
-                if (isPoop( textView1.getText().toString())) {
-                    textView1.setText ( isMyMetod ( textView1.getText ().toString ()));
-                }
-
-                textView2.setText ( "" );
             }
         } );
 
         ymn.setOnClickListener ( new View.OnClickListener () {
             @Override
             public void onClick(View v) {
-                oper = "*";
-                res1 = Double.parseDouble ( textView2.getText ().toString () );
-                if (aDouble != 0) {
-                    textView1.setText ( "" + aDouble );
-                    aDouble = 0;
+                try {
+                    oper = "*";
+                    res1 = Double.parseDouble ( textView2.getText ().toString () );
+                    if (aDouble != 0) {
+                        textView1.setText ( "" + aDouble );
+                        aDouble = 0;
+                    }
+
+                    textView1.setText ( textView1.getText ().toString () + " × " );
+
+                    if (isPoop ( textView1.getText ().toString () )) {
+                        textView1.setText ( isMyMetod ( textView1.getText ().toString () ) );
+                    }
+
+                    textView2.setText ( "" );
+                } catch (Exception e) {
+                    Toast.makeText ( MainActivity.this, "Unknown error", Toast.LENGTH_LONG ).show ();
+                    textView2.setText ( "" );
+                    textView1.setText ( "" );
+                    res2 = 0;
+                    res1 = 0;
+                    oper = "";
                 }
-
-                textView1.setText ( textView1.getText ().toString () + " × " );
-
-                if (isPoop( textView1.getText().toString())) {
-                    textView1.setText ( isMyMetod ( textView1.getText ().toString ()));
-                }
-
-                textView2.setText ( "" );
             }
         } );
 
